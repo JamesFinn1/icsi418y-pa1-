@@ -9,7 +9,6 @@ const highPrio = document.querySelector("#priority-high");
 
 const taskList = [];
 
-
 form.addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -28,8 +27,6 @@ form.addEventListener("submit", function(event){
     else {
         priority = "Low"; // No radio button selected
     }
-        
-    //alert("button pressed by " + name + " Priority level: " + priority);
 
     // Create the object here
     const task = {
@@ -41,7 +38,6 @@ form.addEventListener("submit", function(event){
     // Add to array
     taskList.push(task);
 
-    // Update list
     displayTasks(taskList);
 });
 
@@ -61,9 +57,7 @@ function displayTasks(array) {
 
     const taskName = document.createElement("p"); 
     taskName.textContent = lastTask.name; 
-
     nameGroup.append(nameLabel, taskName);
-
 
     // Priority group
     const priorityGroup = document.createElement("div");
@@ -77,7 +71,6 @@ function displayTasks(array) {
 
     priorityGroup.append(priorityLabel, priority);
 
-
     // Buttons
     const completeButton = document.createElement("button"); 
     completeButton.textContent = "Complete"; 
@@ -86,7 +79,7 @@ function displayTasks(array) {
     const deleteButton = document.createElement("button"); 
     deleteButton.textContent = "Delete"; 
     deleteButton.type = "button"; 
-
+    
     completeButton.addEventListener("click", function () { 
         lastTask.completed = true; 
         taskElement.style.backgroundColor = "#1bea00"; 
@@ -96,7 +89,7 @@ function displayTasks(array) {
         taskElement.remove(); 
     }); 
 
-    // Add everything
+    // Add everything to new div
     taskElement.append(
         nameGroup,
         priorityGroup,
@@ -104,5 +97,6 @@ function displayTasks(array) {
         deleteButton
     ); 
 
+    // add div to body
     taskArea.appendChild(taskElement); 
 }
