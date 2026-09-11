@@ -1,0 +1,61 @@
+<!--Author: James Finn -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Managment</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <!-- Navigation links go here -->
+        </nav>
+    </header>
+
+    <main>
+        <form id="task-form">
+            <fieldset>
+                <legend>Create a Task</legend>
+
+                <label> Task Name: </label>
+                <input type="text" id="task-input" placeholder="Enter Task"><br><br>
+                <label>Priority:</label>
+                <div>
+                    <input type="radio" id="priority-low" name="priority" value="low">
+                    <label for="priority-low">Low</label>
+                </div>
+                <div>
+                    <input type="radio" id="priority-medium" name="priority" value="medium">
+                    <label for="priority-low">Medium</label>
+                </div>
+                <div>
+                    <input type="radio" id="priority-high" name="priority" value="high">
+                    <label for="priority-high">High</label>
+                </div>
+                <br>
+                <button type="submit">Add Task</button>
+            </fieldset>
+
+            <div id="task-list"> 
+                
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 James Finn III. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
